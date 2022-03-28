@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+</head>
+<body>
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+        </style>
+    <table cellpadding="30px">
+        <tr align="center">
+            <td>Work</td>
+            <td>Date</td>
+            <td>Time</td>
+            <!-- <td>Date</td>
+            <td>Time</td> -->
+            <td>Description</td>
+            <td>Frequency</td>
+            
+        </tr>
+        {% for Do in Todo %}
+        <tr align="center">
+            <td>{{Do.Work}}</td>
+            <td>{{Do.date}}</td>
+            <td>{{Do.time}}</td>
+            <!-- <td>{{Do1.date}}</td>
+            <td>{{Do1.time}}</td> -->
+            <td>{{Do.desc}}</td>
+            <td>{{Do.freq}}</td>
+            
+            <td action=""><a href="delete/{{Do.desc}}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+</body>
+</html>
